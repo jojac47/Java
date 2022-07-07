@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PatientTracker.View_Controllers.patientMainScreenController">
+   <children>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="51.0" prefWidth="574.0">
+         <children>
+            <Label prefHeight="53.0" prefWidth="294.0" text="Patient Records" textAlignment="CENTER" textFill="#3043a1">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="151.0" layoutY="67.0" prefHeight="259.0" prefWidth="294.0">
+         <children>
+            <TableView fx:id="patientTblV" prefHeight="259.0" prefWidth="309.0">
+              <columns>
+                <TableColumn fx:id="pId" prefWidth="51.0" text="ID" />
+                <TableColumn fx:id="pName" prefWidth="146.0" text="Name" />
+                  <TableColumn fx:id="pState" prefWidth="96.0" text="State" />
+
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="3.0" layoutY="328.0" prefHeight="68.0" prefWidth="594.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addPatientBTTN" text="Add Patient" />
+            <Button mnemonicParsing="false" onAction="#ModifyPatient" text="Modify Patient" />
+            <Button mnemonicParsing="false" onAction="#pDeleteBTTN" text="Delete Patient " />
+            <Button mnemonicParsing="false" onAction="#pBackBTTN" text="Back" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

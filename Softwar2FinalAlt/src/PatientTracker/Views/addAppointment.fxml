@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="354.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PatientTracker.View_Controllers.addAppointment">
+   <children>
+      <HBox alignment="CENTER" layoutX="7.0" layoutY="6.0" prefHeight="64.0" prefWidth="587.0">
+         <children>
+            <Label text="Add An Appointment" textFill="#0a2add">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="7.0" layoutY="70.0" prefHeight="215.0" prefWidth="587.0" spacing="20.0">
+         <children>
+            <VBox alignment="TOP_RIGHT" prefHeight="280.0" prefWidth="150.0" spacing="20.0">
+               <children>
+                  <Label prefHeight="25.0" prefWidth="144.0" text="Appointment Start Time:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="114.0" text="Appointment Date:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="111.0" text="Appointment Type:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="25.0" prefWidth="39.0" text="Notes:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Counselor:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="280.0" prefWidth="150.0" spacing="20.0">
+               <children>
+                  <ComboBox fx:id="aaStCB" prefHeight="25.0" prefWidth="150.0" />
+                  <DatePicker fx:id="aaAdDP" prefHeight="25.0" prefWidth="150.0" />
+                  <ComboBox fx:id="aaTCB" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="aaNTXT" />
+                  <ComboBox fx:id="aaCoCB" prefWidth="150.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="3.0" layoutY="308.0" prefHeight="64.0" prefWidth="587.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#aaSaveBTTN" text="Save" />
+            <Button mnemonicParsing="false" onAction="#aaCancelBTTN" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="477.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PatientTracker.View_Controllers.appointmentMainScreen">
+   <children>
+      <HBox layoutX="1.0" layoutY="153.0" prefHeight="280.0" prefWidth="250.0">
+         <children>
+            <TableView fx:id="patientTable" onMouseClicked="#handleCustomerClick" prefHeight="280.0" prefWidth="262.0">
+              <columns>
+                <TableColumn fx:id="pIdCol" prefWidth="44.0" text="ID" />
+                <TableColumn fx:id="patientNameCol" prefWidth="85.0" text="Name" />
+                 <TableColumn fx:id="patientInProviderCol" prefWidth="120.0" text="Insurance Provider" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="1.0" layoutY="77.0" prefHeight="77.0" prefWidth="277.0" spacing="10.0">
+         <children>
+            <Label text="Patient Table:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="309.0" text="Please select patient to view and add appointments" />
+         </children>
+      </VBox>
+      <HBox layoutX="13.0" prefHeight="77.0" prefWidth="232.0">
+         <children>
+            <Label prefHeight="43.0" prefWidth="234.0" text="Appointments" textFill="#3c2ddd">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="280.0" layoutY="77.0" prefHeight="43.0" prefWidth="400.0" spacing="20.0">
+         <children>
+            <Label prefHeight="24.0" prefWidth="157.0" text="Appointment Table:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="280.0" layoutY="116.0" prefHeight="43.0" prefWidth="400.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="mnthRDBTTN" mnemonicParsing="false" text="Monthly">
+               <toggleGroup>
+                  <ToggleGroup fx:id="calendar" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="wkRDBTTN" mnemonicParsing="false" text="Weekly" toggleGroup="$calendar" />
+            <RadioButton fx:id="biwklyRDBTTN" mnemonicParsing="false" text="Bi-weekly" toggleGroup="$calendar" />
+         </children>
+      </HBox>
+      <HBox layoutX="280.0" layoutY="153.0" prefHeight="280.0" prefWidth="355.0">
+         <children>
+            <TableView fx:id="appointmentTable" prefHeight="280.0" prefWidth="359.0">
+               <columns>
+                  <TableColumn fx:id="aStCol" prefWidth="210.0" text="Start Time" />
+                  <TableColumn fx:id="aTCol" prefWidth="144.0" text="Type" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="1.0" layoutY="433.0" prefHeight="53.0" prefWidth="690.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#apAddBTTN" text="Add Appointment" />
+            <Button mnemonicParsing="false" onAction="#apModBTTN" text="Modify Appointment" />
+            <Button mnemonicParsing="false" onAction="#apDelBTTN" text="Delete Appointment" />
+            <Button mnemonicParsing="false" onAction="#apBackBTTN" text="back" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER_LEFT" layoutX="311.0" layoutY="13.0" prefHeight="71.0" prefWidth="288.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="328.0" text="To view appointments select either Monthly, Weekly," />
+            <Label text="or Bi-Weekly. Then select a patient to view all of that " />
+            <Label text="patients appointments for the selected time frame" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

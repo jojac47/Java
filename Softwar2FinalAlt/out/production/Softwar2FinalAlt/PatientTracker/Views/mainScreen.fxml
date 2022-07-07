@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PatientTracker.View_Controllers.mainScreenController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="59.0" prefWidth="600.0" spacing="150.0">
+         <children>
+            <Label prefHeight="53.0" prefWidth="290.0" text="Patient Tracker " textFill="#242eb9">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#msExitBTTN" prefHeight="25.0" prefWidth="66.0" text="EXIT" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="131.0" prefHeight="65.0" prefWidth="600.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#msPatientBTTN" text="Patients" />
+            <Button mnemonicParsing="false" onAction="#msAppointmentBTTN" text="Appointments" />
+            <Button mnemonicParsing="false" onAction="#msReportsBTTN" text="Reports" />
+            <Button mnemonicParsing="false" onAction="#logsBttn" text="Logs" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
